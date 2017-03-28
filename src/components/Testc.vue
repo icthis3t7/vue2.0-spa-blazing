@@ -1,13 +1,29 @@
 <template>
   <div>
     <h2>Testc component</h2>
+    <p>prop:
+      {{ onServ }}
+    </p>
 
+    <p>
+      comp: {{ onComp }}
+    </p>
   </div>
 
 </template>
 
 <script>
+  import TestImport from '../services/restResource';
+
   export default {
+    data() {
+      return {
+      onComp: 'im on component',
+      onServ: TestImport.prop
+
+    };
+
+    }
 
   }
 

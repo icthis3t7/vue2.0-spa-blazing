@@ -2,26 +2,41 @@
   <div>
     <h2>Testc component</h2>
     <p>prop:
-      {{ onServ }}
+      {{ onServ.prop }}
     </p>
 
     <p>
-      comp: {{ onComp }}
+      {{ onServ.time.toString() }}
+    </p>
+
+    <p>
+      factory {{factime.toString() }}
+    </p>
+
+    <p>
+      service: {{ service.time.toString() }}
     </p>
   </div>
 
 </template>
 
 <script>
-  import TestImport from '../services/restResource';
+  import Service from '../services/restResource';
+  import Factory from '../services/factory';
 
   export default {
-    data() {
-      return {
-      onComp: 'im on component',
-      onServ: TestImport.prop
+      data() {
+        return {
+        onComp: 'im on component',
+        onServ: Service
 
-    };
+      };
+
+    },
+    created: function () {
+      let factory = new Factory();
+      this.factime = factory.time;
+      this.service = Service;
 
     }
 

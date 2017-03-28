@@ -1,21 +1,14 @@
 <template>
-  <div class="hello">
-    <h2>Home component</h2>
-    <h3>{{ msg }}</h3>
+  <div>
+    <h2>Testc component</h2>
 
   </div>
+
 </template>
 
 <script>
   export default {
-    name: 'hello',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-
-      }
-
-    }
+    name: 'testc'
 
   }
 
@@ -40,4 +33,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
